@@ -11,6 +11,8 @@ import { MyPostsComponent } from './my-posts/my-posts.component';
 import { SignUpComponent } from './auth/sign-up/sign-up.component';
 import { LoginComponent } from './auth/login/login.component';
 import { HomeComponent } from './home/home.component';
+import { FormsModule } from "@angular/forms";
+import { RouteGuard } from "./auth/route-guard";
 
 @NgModule({
   declarations: [
@@ -26,9 +28,12 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    RouteGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
