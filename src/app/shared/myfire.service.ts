@@ -75,4 +75,8 @@ export class MyFireService {
         
         return firebase.database().ref().update(updates);
     }
+
+    getUserPostsRef(uid) {
+        return firebase.database().ref('myposts').child(uid);
+    }
 }
